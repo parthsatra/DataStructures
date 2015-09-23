@@ -26,3 +26,11 @@
 *.exe
 *.out
 *.app
+
+# Editor Settings
+.idea/*
+*/.idea/*
+
+# Mac Specific files 
+.DS_Store
+
