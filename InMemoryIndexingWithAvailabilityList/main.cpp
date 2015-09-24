@@ -28,14 +28,14 @@ fstream db_handle;
 
 void save_files() {
     fstream _a_handle;
-    _a_handle.open("availability_list.db", ios::out | ios::binary);
+    _a_handle.open("availability_list.db", ios::out | ios::binary | ios::trunc);
     if(_a_handle.is_open()) {
         _a_handle.write((char *)avail_list, (MAX_LENGTH * sizeof(avail_S)));
         _a_handle.close();
     }
 
     fstream _i_handle;
-    _i_handle.open("index_list.db", ios::out | ios::binary);
+    _i_handle.open("index_list.db", ios::out | ios::binary | ios::trunc);
     if(_i_handle.is_open()) {
         _i_handle.write((char *)index_list, (MAX_LENGTH * sizeof(index_S)));
         _i_handle.close();
