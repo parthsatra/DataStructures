@@ -28,16 +28,16 @@ fstream db_handle;
 
 void save_files() {
     fstream _a_handle;
-    _a_handle.open("availability_list.db", ios::out | ios::binary | ios::trunc);
+    _a_handle.open("availability_list.db", ios::out | ios::binary);
     if(_a_handle.is_open()) {
-        _a_handle.write((char *)avail_list, (MAX_LENGTH * sizeof(avail_S))/ sizeof(char));
+        _a_handle.write((char *)avail_list, (MAX_LENGTH * sizeof(avail_S)));
         _a_handle.close();
     }
 
     fstream _i_handle;
-    _i_handle.open("index_list.db", ios::out | ios::binary | ios::trunc);
+    _i_handle.open("index_list.db", ios::out | ios::binary);
     if(_i_handle.is_open()) {
-        _i_handle.write((char *)index_list, (MAX_LENGTH * sizeof(index_S))/ sizeof(char));
+        _i_handle.write((char *)index_list, (MAX_LENGTH * sizeof(index_S)));
         _i_handle.close();
     }
 }
@@ -46,16 +46,14 @@ void load_files() {
     fstream _a_handle;
     _a_handle.open("availability_list.db", ios::in | ios::binary);
     if(_a_handle.is_open()) {
-        _a_handle.seekg(0);
-        _a_handle.read((char *)avail_list, sizeof(avail_S));
+        _a_handle.read((char *)avail_list, MAX_LENGTH * sizeof(avail_S));
         _a_handle.close();
     }
 
     fstream _i_handle;
     _i_handle.open("index_list.db", ios::in | ios::binary);
     if(_i_handle.is_open()) {
-        _i_handle.seekg(0);
-        _i_handle.read((char *) &index_list, sizeof(index_S));
+        _i_handle.read((char *)index_list, MAX_LENGTH * sizeof(index_S));
         _i_handle.close();
     }
 
@@ -146,6 +144,7 @@ static int compare_worst_fit(const void *a1, const void *a2) {
 }
 
 int find(char *key) {
+    cout << "Finding : " << key << endl;
     int key_value = atoi(key);
     int low = 0;
     int high = index_size - 1;
@@ -194,6 +193,7 @@ long get_offset(int record_size) {
             if(size > 0) {
                 avail_list[avail_size].siz = size;
                 avail_list[avail_size].off = offset + record_size + sizeof(int);
+                avail_size++;
             }
             break;
         }
@@ -236,6 +236,7 @@ void add(char *key, char *record, int record_size, int ops) {
     }
 
     if (db_handle.is_open()) {
+        db_handle.seekg(offset);
         db_handle.write((char *) &record_size, sizeof(int));
         db_handle.write(record, record_size);
 
@@ -377,9 +378,11 @@ int main(int argc, char *argv[]) {
                 add(key, record, record_size, ops);
             } else if (!strcmp("del", command)) {
                 memcpy(key, input_buffer + command_size + 1, key_size);
+                key[key_size] = '\0';
                 del(key, ops);
             } else if (!strcmp("find", command)) {
                 memcpy(key, input_buffer + command_size + 1, key_size);
+                key[key_size] = '\0';
                 int i = find(key);
                 long offset = index_to_offset(i);
                 fetch_record(offset, key);
