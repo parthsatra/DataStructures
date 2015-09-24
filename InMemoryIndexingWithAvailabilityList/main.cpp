@@ -144,7 +144,6 @@ static int compare_worst_fit(const void *a1, const void *a2) {
 }
 
 int find(char *key) {
-    cout << "Finding : " << key << endl;
     int key_value = atoi(key);
     int low = 0;
     int high = index_size - 1;
