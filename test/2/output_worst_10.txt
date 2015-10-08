@@ -1,0 +1,13 @@
+No record with SID=175166074 exists
+No record with SID=900606593 exists
+No record with SID=1743932593 exists
+No record with SID=1919217756 exists
+Index:
+key=395101488: offset=147
+key=538972967: offset=91
+key=915351086: offset=208
+key=1558076164: offset=0
+Availability:
+size=10: offset=137
+Number of holes: 1
+Hole space: 10

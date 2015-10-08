@@ -1,0 +1,95 @@
+No record with SID=798716323 exists
+No record with SID=1788405273 exists
+980685270|WMUTnNFqKQylbJU|vGuwcEfpGZAENzoEYCatsOYIy|OIlQrINz
+980685270|WMUTnNFqKQylbJU|vGuwcEfpGZAENzoEYCatsOYIy|OIlQrINz
+1598695640|MDYPNhPJaxCwRQXahx|UEXBRNUtPCaHP|
+No record with SID=464721772 exists
+No record with SID=980685270 exists
+No record with SID=871050957 exists
+1598695640|MDYPNhPJaxCwRQXahx|UEXBRNUtPCaHP|
+No record with SID=980685270 exists
+No record with SID=980685270 exists
+No record with SID=2104556382 exists
+No record with SID=1348117312 exists
+No record with SID=980685270 exists
+1598695640|MDYPNhPJaxCwRQXahx|UEXBRNUtPCaHP|
+36689501|bhygxIDKnwYkJyzlbsSUUeI|FKxnN|UxKVhLbE
+No record with SID=1755941093 exists
+36689501|bhygxIDKnwYkJyzlbsSUUeI|FKxnN|UxKVhLbE
+No record with SID=980685270 exists
+No record with SID=98689238 exists
+36689501|bhygxIDKnwYkJyzlbsSUUeI|FKxnN|UxKVhLbE
+No record with SID=153195697 exists
+No record with SID=935591694 exists
+No record with SID=60372213 exists
+No record with SID=2104556382 exists
+No record with SID=590214424 exists
+No record with SID=1840276389 exists
+1434505182|IQKTrdP|aVPJSLOzEZnDHxx|RE
+No record with SID=2104556382 exists
+No record with SID=1448194826 exists
+2130616690|RboPPURTpc|BFOtopTOnOdbfUmTUwgnuzok|
+No record with SID=980685270 exists
+394303959|JBuFopQfaaEWKCEyZ|TyyuhYXvUtEryiCBehPWX|VWXbSkfZ
+116506564|pwotiZETIJmOhIpNBNtnKDI|MNVaQqdtFAjAkieeQpqgxAXkcKfRXkclY|zmqPp
+No record with SID=1811256613 exists
+1598695640|MDYPNhPJaxCwRQXahx|UEXBRNUtPCaHP|
+1831862164|ULVoQZiYk|LmgiytewmnXMDgvzajvWfEssAHibrIlcwTN|UORS
+No record with SID=710062794 exists
+No record with SID=6009409 exists
+No record with SID=1604945720 exists
+No record with SID=1625955345 exists
+No record with SID=1663650302 exists
+1717271919|VvenbwLmWBIkhyVCgErmhLejf|XTfAmxvHek|IAV
+No record with SID=70498294 exists
+No record with SID=1245586750 exists
+No record with SID=1277371502 exists
+1434505182|IQKTrdP|aVPJSLOzEZnDHxx|RE
+No record with SID=1598695640 exists
+No record with SID=655063928 exists
+No record with SID=1763295577 exists
+No record with SID=721049638 exists
+No record with SID=399434789 exists
+No record with SID=399434789 exists
+No record with SID=2104556382 exists
+No record with SID=2104556382 exists
+2019177378|CYgpDSjYBlsJOElNIaSGdMa|FEqfR|Vvzx
+No record with SID=1012056341 exists
+No record with SID=2104204102 exists
+No record with SID=1264372596 exists
+No record with SID=198047444 exists
+Index:
+key=36689501: offset=220
+key=116506564: offset=965
+key=167002740: offset=345
+key=394303959: offset=148
+key=665776596: offset=1183
+key=687011751: offset=1408
+key=866796476: offset=84
+key=878234601: offset=1251
+key=882736181: offset=0
+key=1015806634: offset=1042
+key=1434505182: offset=582
+key=1434722229: offset=623
+key=1488364397: offset=742
+key=1540615111: offset=1466
+key=1636184657: offset=441
+key=1640715071: offset=1332
+key=1717271919: offset=910
+key=1831862164: offset=517
+key=1892308328: offset=871
+key=2019177378: offset=274
+key=2081594058: offset=795
+key=2140902478: offset=1114
+Availability:
+size=3: offset=271
+size=4: offset=674
+size=10: offset=210
+size=13: offset=729
+size=14: offset=118
+size=15: offset=1168
+size=16: offset=132
+size=22: offset=323
+size=51: offset=678
+Number of holes: 9
+Hole space: 148

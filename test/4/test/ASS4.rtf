@@ -1,0 +1,829 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 TrebuchetMS;\f1\fnil\fcharset0 Georgia;\f2\fnil\fcharset0 Monaco;
+\f3\fnil\fcharset0 ArialUnicodeMS;\f4\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red84\green0\blue155;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid502\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid701\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid8}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Introduction\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The goals of this assignment are two-fold:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To introduce you to searching data on disk using B-trees.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To investigate how changing the order of a B-tree affects its performance.\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Index File\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 During this assignment you will create, search, and manage a binary index file of integer key values. The values stored in the file will be specified by the user. You will structure the file as a B-tree.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Program Execution\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program will be named 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 assn_4
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and it will run from the command line. Two command line arguments will be specified: the name of the index file, and a B-tree order.\
+\pard\pardeftab720
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 assn_4 index-file order
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 For example, executing your program as follows\
+\pard\pardeftab720
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 assn_4 index.bin 4
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 would open an index file called 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  that holds integer keys stored in an order-4 B-tree. You can assume 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 order
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will always be \uc0\u8805  3. For convenience, we refer to the index file as
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  throughout the remainder of the assignment.\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  If you are asked open an existing index file, you can assume the B-tree order specified on the command line matches the order that was used when the index file was first created.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B-Tree Nodes\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program is allowed to hold individual B-tree nodes in memory\'97but not the entire tree\'97at any given time. Your B-tree node should have a structure and usage similar to the following.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 #include <stdlib.h>\
+\
+int order = 4;    /* B-tree order */\
+\
+typedef struct \{  /* B-tree node */\
+  int   n;        /* Number of keys in node */\
+  int  *key;      /* Node's keys */\
+  long *child;    /* Node's child subtree offsets */\
+\} btree_node;\
+\
+btree_node node;  /* Single B-tree node */\
+\
+node.n = 0;\
+node.key = (int *) calloc( order - 1, sizeof( int ) );\
+node.child = (long *) calloc( order, sizeof( long ) );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  Be careful when you're reading and writing data structures with dynamically allocated memory. For example, trying to write 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 node
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  like this
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 fwrite( &node, sizeof( btree_node ), 1, fp );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 will write 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 node
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's key count, the pointer value for its key array, and the pointer value for its child offset array, but 
+\f0\b \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 it will not
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  write the contents of the key and child offset arrays. The arrays' contents and not pointers to their contents need to be written explicitly instead.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 fwrite( &node.n, sizeof( int ), 1, fp );\
+fwrite( node.key, sizeof( int ), order - 1, fp );\
+fwrite( node.child, sizeof( long ), order, fp );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Reading 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 node
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  structures from disk would use a similar strategy.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Root Node Offset\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 In order to manage any tree, you need to locate its root node. Initially the root node will be stored near the front of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If the root node splits, however, a new root will be appended to the end of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . The root node's offset will be maintained persistently by storing it at the front of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  when the file is closed, and reading it when the file is opened.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 #include <stdio.h>\
+\
+FILE *fp;    /* Input file stream */\
+long  root;  /* Offset of B-tree root node */\
+\
+fp = fopen( "index.bin", "r+b" );\
+\
+/*  If file doesn't exist, set root offset to unknown and create\
+ *  file, otherwise read the root offset at the front of the file */\
+\
+if ( fp == NULL ) \{\
+  root = -1;\
+  fp = fopen( "index.bin", "w+b" );\
+  fwrite( &root, sizeof( long ), 1, fp );\
+\} else \{\
+  fread( &root, sizeof( long ), 1, fp );\
+\}\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 User Interface\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The user will communicate with your program through a set of commands typed at the keyboard. Your program must support four simple commands:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls2\ilvl0
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 add k
+\f1\fs26 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Add a new integer key with value 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls2\ilvl0
+\f2\fs24 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 find k
+\f1\fs26 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Find an entry with a key value of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , if it exists.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls2\ilvl0
+\f2\fs24 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 print
+\f1\fs26 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Print the contents and the structure of the B-tree on-screen.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls2\ilvl0
+\f2\fs24 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 end
+\f1\fs26 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Update the root node's offset at the front of the 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and close the index file, and end the program.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Add\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Use a standard B-tree algorithm to add a new key 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to the index file.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Search the B-tree for the leaf node 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  responsible for 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is stored in 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's key list, print
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Entry with key=k already exists
+\f1\fs26 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 on-screen and stop, since duplicate keys are not allowed.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create a new key list 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  that contains 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's keys, plus 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , sorted in ascending order.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's key list is not full, replace it with 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , update 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's child offsets, write 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  back to disk, and stop.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Otherwise, split 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  about its median key value 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 m
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  into left and right key lists 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 L
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  = (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 0
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , ... , 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 m
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 -1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 ) and 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 R
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  = (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 m
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 +1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , ... , 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 n
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 -1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 ). Use ceiling to calculate 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 m
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  = 
+\f3 \uc0\u8968 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\super \outl0\strokewidth0 (n-1)
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 /
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 2
+\f3\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 \uc0\u8969 
+\f1 . For example, if 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 n
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  = 3, 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 m
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  = 1. If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 n
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  = 4, 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 m
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  = 2.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Save 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 L
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  and its associated child offsets in 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , then write 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  back to disk.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Save 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 K
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 R
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  and its associated child offsets in a new node 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 R
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , then append 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 R
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to the end of the index file.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Promote 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 m
+\f4\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 \uc0\u8201 
+\f1 , 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's offset, and 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 R
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's offset and insert them in 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's parent node. If the parent's key list is full, recursively split its list and promote the median to its parent.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If a promotion is made to a root node with a full key list, split and create a new root node holding 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 m
+\i0\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  and offsets to 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 L
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 R
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Find\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 To find key value 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  in the index file, search the root node for 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is found, the search succeeds. Otherwise, determine the child subtree 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 S
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  that is responsible for 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , then recursively search 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 S
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 k
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is found during the recursive search, print\
+\pard\pardeftab720
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Entry with key=k exists
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 on-screen. If at any point in the recursion 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 S
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  does not exist, print\
+\pard\pardeftab720
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Entry with key=k does not exist
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 on-screen.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Print\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 This command prints the contents of the B-tree on-screen, level by level. Begin by considering a single B-tree node. To print the contents of the node on-screen, print its key values separated by commas.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 int         i;      /* Loop counter */\
+btree_node  node;   /* Node to print */\
+long        off;    /* Node's offset */\
+\
+for( i = 0; i < node.n - 1; i++ ) \{\
+  printf( "%d,", node.key[ i ] );\
+\}\
+printf( "%d", node.key[ node.n - 1 ] );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 To print the entire tree, start by printing the root node. Next, print the root node's children on a new line, separating each child node's output by a space character. Then, print their children on a new line, and so on until all the nodes in the tree are printed. This approach prints the nodes on each level of the B-tree left-to-right on a common line.\
+For example, inserting the integers 1 through 13 inclusive into an order-4 B-tree would produce the following output.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2  1: 9\
+ 2: 3,6 12\
+ 3: 1,2 4,5 7,8 10,11 13\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 To support trees with more than 9 levels, we leave space for two characters to print the level at the beginning of each line, that is, using 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 printf( "%2d: ", lvl )"
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  or something similar.\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Hint.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  To process nodes left-to-right level-by-level, do not use recursion. Instead, create a queue containing the root node's offset. Remove the offset at the front of the queue (initially the root's offset) and read the corresponding node from disk. Append the node's non-empty subtree offsets to the end of the queue, then print the node's key values. Continue until the queue is empty.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 End\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 This command ends the program by writing the root node's offset to the front of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , then closing the index file.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Programming Environment\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 All programs must be written in C, and compiled to run on the 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 remote.eos.ncsu.edu
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  Linux server. Any ssh client can be used to access your Unity account and AFS storage space on this machine.\
+Your assignment will be run automatically, and the output it produces will be compared to known, correct output using 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . Because of this, 
+\f0\b \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 your output must conform to the print command's description
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If it doesn't, 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will report your output as incorrect, and it will be marked accordingly.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Supplemental Material\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 In order to help you test your program, we provide example input and output files.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls4\ilvl0
+\f2\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/input-01.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-01.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , an input file of commands applied to an initially empty index file saved as an order-4 B-tree, and\cb1 \
+\ls4\ilvl0
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/input-02.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-02.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , an input file of commands applied to the index file produced by 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input-01.txt
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The output files show what your program should print after each input file is processed.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls5\ilvl0
+\f2\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/output-01.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-01.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , the output your program should produce after it processes 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input-01.txt
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\ls5\ilvl0
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/output-02.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-02.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , the output your program should produce after it processes 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input-02.txt
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 To test your program, you would issue the following commands:
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 % rm index.bin\
+% assn_4 index.bin 4 < input-01.txt > my-output-01.txt\
+% assn_4 index.bin 4 < input-02.txt > my-output-02.txt\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 You can use 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to compare output from your program to our output files. If your program is running properly and your output is formatted correctly, your program should produce output identical to what is in these files.\
+Please remember, the files we're providing here are meant to serve as examples only. Apart from holding valid commands, 
+\f0\b \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 you cannot make any assumptions
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  about the size or the content of the input files we will use to test your program.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Test Files\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The following files were used to test your program.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls6\ilvl0
+\f0\b \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Order 3 Test Case.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj
+\ls6\ilvl1
+\f2\b0\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/input-03.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-03.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls6\ilvl1
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/output-03.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-03-first.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls6\ilvl0
+\f0\b \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Order 4 Test Case.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj
+\ls6\ilvl1
+\f2\b0\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/input-04.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-04.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls6\ilvl1
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/output-04.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-04-first.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls6\ilvl0
+\f0\b \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Order 10 Test Case.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj
+\ls6\ilvl1
+\f2\b0\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/input-10-01.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-10-01.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/input-10-02.txt"}}{\fldrslt 
+\f2\fs24 \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-10-02.txt}}\cb1 \
+\ls6\ilvl1
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/output-10-01.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-10-01.txt}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/output-10-02.txt"}}{\fldrslt 
+\f2\fs24 \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-10-02.txt}}\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls6\ilvl0
+\f0\b \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Order 20 Test Case.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj
+\ls6\ilvl1
+\f2\b0\fs24 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/input-20.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 input-20.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls6\ilvl1
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u9702 
+\f2 	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/test/output-20.txt"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 output-20-first.txt}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program was run on all test cases using order-3, order-4, and order-20 B-trees.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 % rm index.bin\
+% assn_4 index.bin 3 < input-03.txt > my-output-03.txt\
+% rm index.bin\
+% assn_4 index.bin 4 < input-04.txt > my-output-04.txt\
+% rm index.bin\
+% assn_4 index.bin 20 < input-20.txt > my-output-20.txt\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program was also run twice using an order-10 B-tree, to test its ability to re-use an existing index file.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 % rm index.bin\
+% assn_4 index.bin 10 < input-10-01.txt > my-output-10-01.txt \
+% assn_4 index.bin 10 < input-10-02.txt > my-output-10-02.txt \
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Hand-In Requirements\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Use {\field{\*\fldinst{HYPERLINK "https://wolfware.ncsu.edu/?term=current&type=complex&what=CSC%20541"}}{\fldrslt \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Moodle}} (the online assignment submission software) to submit the following files:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls7\ilvl0
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 assn_4
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , a Linux executable of your finished assignment, and\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls7\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 all associated source code files (these can be called anything you want).\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 There are four important requirements that your assignment must satisfy.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls8\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your executable file must be named exactly as shown above. The program will be run and marked electronically using a script file, so using a different name means the executable will not be found, and subsequently will not be marked.\cb1 \
+\ls8\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your program must be compiled to run on 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 remote.eos.ncsu.edu
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If we cannot run your program, we will not be able to mark it, and we will be forced to assign you a grade of 0.\cb1 \
+\ls8\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your program must produce output that exactly matches the format described in the {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_4/index.html#print_cmd"}}{\fldrslt \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 print command}} section of this assignment. If it doesn't, it will not pass our automatic comparison to known, correct output.\cb1 \
+\ls8\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You must submit your source code with your executable prior to the submission deadline. If you do not submit your source code, we cannot MOSS it to check for code similarity. Because of this, any assignment that does not include source code will be assigned a grade of 0.\cb1 \
+}

@@ -1,0 +1,848 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 TrebuchetMS;\f1\fnil\fcharset0 Georgia;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red153\green181\blue196;
+\red109\green109\blue109;\red84\green0\blue155;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid302\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}
+{\list\listtemplateid9\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid801\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid9}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Introduction\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The goals of this assignment are two-fold:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To introduce you to sorting data on disk using mergesort.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 To compare the performance of different algorithms for creating and merging runs during mergesort.\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Index File\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 During this assignment you will sort a binary index file of integer key values. The values are stored in the file in a random order. You will use a mergesort to produce a second index file whose key values are sorted in ascending order.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Program Execution\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program will be named 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 assn_3
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and it will run from the command line. Three command line arguments will be specified: a mergesort method, the name of the input index file, and the name of the sorted output index file.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 assn_3 mergesort-method index-file sorted-index-file\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program must support three different mergesort methods.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trmarl1907 \trmarr1907 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth9620\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl160 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 1.\cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs22 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --basic
+\f1\fs24 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \cell 
+\pard\intbl\itap1\pardeftab720\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Split the index file into sorted runs stored on disk, then merge the runs to produce a sorted index file.\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trmarl1907 \trmarr1907 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth9620\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl160 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 2.\cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs22 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --multistep
+\f1\fs24 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \cell 
+\pard\intbl\itap1\pardeftab720\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Split the index file into sorted runs. Merge subsets of runs to create super-runs, then merge the super-runs to produce a sorted index file.\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trmarl1907 \trmarr1907 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadb160 \clpadr160 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth1720\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth9620\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl160 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 3.\cb1 \cell 
+\pard\intbl\itap1\pardeftab720
+
+\f2\fs22 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --replacement
+\f1\fs24 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \cell 
+\pard\intbl\itap1\pardeftab720\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Split the index file into sorted runs created using replacement selection, then merge the runs to produce a sorted index file.\cb1 \cell \lastrow\row
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 For example, executing your program as follows
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 assn_3 --multistep input.bin sort.bin\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 would apply a multistep mergesort to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to sort it ascending by key value. The result would be stored in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  For convenience, we refer to the input index file as 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and the output sorted index file as 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  throughout the remainder of the assignment.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Available Memory\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Mergesort's run sizes and merge performance depend on the amount of memory available for run creating and merging runs.\
+Your program will be assigned one input buffer for reading data (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 e.g.
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , blocks of keys during run creation of parts of runs during merging). The input buffer must be sized to hold a maximum of 1000 integer keys.\
+Your program will also be assigned one output buffer for writing data (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 e.g.
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , sorted blocks of keys during run creation or sorted subsets of 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  during merging). The output buffer must be sized to hold a maximum of 1000 integer keys.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Basic Mergesort\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 If your program sees the merge method 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --basic
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , it will implement a standard mergesort of the keys in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . The program should perform the following steps.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Open 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and read its contents in 1000-key blocks using the input buffer.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sort each block and write it to disk as a run file. You can use any in-memory sorting algorithm you want (e.g., C's 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 qsort()
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  function). Name each run file 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index-file.n
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , where 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 n
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is a 3-digit run identifier, starting at 0. For example, if the input index file is 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , the run files would be named
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.000\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.001\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.002\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  ...\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls2\ilvl0\cf2 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Open each run file and buffer part of its contents into the input buffer. The amount of each run you can buffer will depend on how many runs you are merging (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 e.g.
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , merging 50 runs using the 1000-key input buffer allows you to buffer 20 keys per run).\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Merge the runs to produce sorted output. Use the output buffer to write the results in 1000-key chunks as binary data to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Whenever a run's buffer is exhausted, read another block from the run file. Continue until all run files are exhausted.\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 You must record how much time it takes to complete the basic mergesort. This includes run creation, merging, and writing the results to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  You will never be asked to merge more than 1000 runs in Step 3. This guarantees there will always be enough memory to assign a non-empty buffer to each run.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Multistep Mergesort\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 If your program sees the merge method 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --multistep
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , it will implement a two-step mergesort of the keys in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . The program should perform the following steps.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create the initial runs for 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , exactly like the basic mergesort.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Merge a set of 15 runs to produce a super-run. Open the first 15 run files and buffer them using your input buffer. Merge the 15 runs to produce sorted output, using your output buffer to write the results as binary data to a super-run file.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Continue merging sets of 15 runs until all of the runs have been processed. Name each super-run file 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 index-file.super.n
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , where 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 n
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is a 3-digit super-run identifier, starting at 0. For example, if the input file is 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , the super-run files would be named
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.super.000\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.super.001\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 input.bin.super.002\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  ...\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls3\ilvl0\cf2 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 
+\f0\b\fs26 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  If the number of runs created in Step 1 is not evenly divisible by 15, the final super-run will merge fewer than 15 runs.\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Merge all of the super-runs to produce sorted output. Use the input buffer to read part of the contents of each super-run. Use the output buffer to write the results in 1000-key chunks as binary data to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 You must record how much time it takes to complete the multistep mergesort. This includes initial run creation, merging to create super-runs, merging super-runs, and writing the results to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  You will never be asked to merge more than 1000 super-runs in Step 3. This guarantees there will always be enough memory to assign a non-empty buffer to each super-run.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Replacement Selection Mergesort\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 If your program sees the merge method 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 --replacement
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , it will implement a mergesort that uses replacement selection to create runs from the values in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . The program should perform the following steps.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Divide your input buffer into two parts: 750 entries are reserved for a heap 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  ... 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 750
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , and 250 entries are reserved as an input buffer 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  ... 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 250
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  to read keys from
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Read the first 750 keys from 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  into 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and the next 250 keys into 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . Rearrange 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  so it forms an ascending heap.\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Append 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  (the smallest value in the heap) to the current run, managed through the output buffer. Use replacement selection to determine where to place 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 .\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj
+\ls4\ilvl1\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  \uc0\u8804  
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , replace 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  with 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 .\cb1 \
+\ls4\ilvl1\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 If 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  > 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , replace 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  with 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 750
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , reducing the size of the heap by one. Replace 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 750
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  with 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0 , increasing the size of the secondary heap by one.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Adjust 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0\fs22 \expnd0\expndtw0\kerning0
+\sub \outl0\strokewidth0 1
+\fs26 \expnd0\expndtw0\kerning0
+\nosupersub \outl0\strokewidth0  to reform 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  into a heap.\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Continue replacement selection until 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is empty, at which point the current run is completed. The secondary heap will be full, so it replaces 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 H
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and a new run is started.\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Run creation continues until all values in 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  have been processed. Name the runs exactly as you did for the basic mergesort (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 i.e.
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin.000
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 ,
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin.001
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and so on).\cb1 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Merge the runs to produce sorted output, exactly like the merge step in the basic mergesort.\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 You must record how much time it takes to complete the replacement selection mergesort. This includes replacement selection run creation, merging the replacement selection runs, and writing the results to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f0\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Note.
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  You will never be asked to merge more than 1000 runs in Step 6. This guarantees there will always be enough memory to assign a non-empty buffer to each run.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Programming Environment\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 All programs must be written in C, and compiled to run on the 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 remote.eos.ncsu.edu
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  Linux server. Any ssh client can be used to access your Unity account and AFS storage space on this machine.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Measuring Time\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The simplest way to measure execution time is to use 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 gettimeofday()
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to query the current time at appropriate locations in your program.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 #include <sys/time.h>\
+\
+struct timeval tm;\
+\
+gettimeofday( &tm, NULL );\
+printf( "Seconds: %d\\n", tm.tv_sec );\
+printf( "Microseconds: %d\\n", tm.tv_usec );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Comparing 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 tv_sec
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 tv_usec
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  for two 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 timeval
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  structs will allow you to measure the amount of time that's passed between two 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 gettimeofday()
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  calls.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Writing Results\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Sorted keys must be written to 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  as binary integers. C's built-in file writing operations allow this to be done very easily.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 #include <stdio.h>\
+\
+FILE *fp;                  /* Output file stream */\
+int   output_buf[ 1000 ];  /* Output buffer */\
+\
+fp = fopen( "sort.bin", "wb" );\
+fwrite( output_buf, sizeof( int ), 1000, fp );\
+fclose( fp );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your program must also print the total execution time for the mergesort it performs as a single line on-screen. Assuming the execution time is held in a 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 timeval
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  struct called 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 exec_tm
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , use the following 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 printf
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  statement to do this.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 printf( "Time: %ld.%06ld", exec_tm.tv_sec, exec_tm.tv_usec );\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your assignment will be run automatically, and the output it produces will be compared to known, correct output using 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . Because of this, 
+\f0\b \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 your output must conform to the above requirements exactly
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If it doesn't, 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will report your output as incorrect, and it will be marked accordingly.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Supplemental Material\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 In order to help you test your program, we provide example 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  and 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  files.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls5\ilvl0
+\f2\fs24 \cf6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/input.bin"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 input.bin}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , a binary input file file containing 250,000 keys,\cb1 \
+\ls5\ilvl0
+\f2\fs24 \cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/sort.bin"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 sort.bin}}
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , a binary output file containing 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 's 250,000 keys in ascending sorted order.\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 You can use 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to compare output from your program to our {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/sort.bin"}}{\fldrslt 
+\f2\fs24 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 sort.bin}} file.\
+Please remember, the files we're providing here are meant to serve as examples only. Apart from holding integers, and a guarantee that the number of runs (or super-runs) will not exceed the input buffer's capacity, 
+\f0\b \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 you cannot make any assumptions
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  about the size or the content of the input and sort files we will use to test your program.\
+\pard\pardeftab720\li1271\ri1271\sa58\qj
+
+\f0\b\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Test Files\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 The following files were used to test your program.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls6\ilvl0
+\f0\b \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Basic:
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/test/basic.tgz"}}{\fldrslt 
+\f2\fs24 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 basic.tgz}}\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls6\ilvl0
+\f0\b \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Multistep:
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/test/multistep.tgz"}}{\fldrslt 
+\f2\fs24 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 multistep.tgz}}\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\ls6\ilvl0
+\f0\b \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Replacement Selection:
+\f1\b0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/test/replacement.tgz"}}{\fldrslt 
+\f2\fs24 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 replacement.tgz}}\cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Each tar file contains three test scenarios in separate subdirectories: a small case, a medium case, and a large case. For example, 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 basic.tgz
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  has three subdirectories: 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sm
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 med
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 lg
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\
+Within each subdirectory is an input file (
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input-1000.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.30000.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 input.99000.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , respectively), all intermediate run files, and a final 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 sort.bin
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  sorted output file. We
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 'd these known, correct intermediate run files and the sorted output file to your results to test your program.\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will only tell you if two binary files are the same or different. It will not tell you where they differ. If you want to investigate exactly 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 why
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  your binary files differ from ours, you can download and compile this program.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls7\ilvl0
+\f2\fs24 \cf6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/test/dump.c"}}{\fldrslt \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 dump.c}}
+\f1\fs26 \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Running 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 dump binfile
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will dump the contents of a packed binary integer file as text, one line per integer. You can redirect results from 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 dump
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to generate text versions of the two binary files you want to compare, then 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  those text files.
+\f2\fs22 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 % gcc -o dump dump.c\
+% dump input.bin.000 > input.txt.000\
+% dump my-input.bin.000 > my-input.txt.000\
+% diff input.txt.000 my-input.txt.000\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Now, 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 diff
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  will tell you exactly which lines (
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 i.e.,
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  which integers) are different.\
+\pard\pardeftab720\li1271\ri1271\sa74\qj
+
+\f0\b\fs38 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Hand-In Requirements\
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+
+\f1\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Use {\field{\*\fldinst{HYPERLINK "https://wolfware.ncsu.edu/?term=current&type=complex&what=CSC%20541"}}{\fldrslt \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 Moodle}} (the online assignment submission software) to submit the following files:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls8\ilvl0
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 assn_3
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , a Linux executable of your finished assignment, and\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls8\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 all associated source code files (these can be called anything you want).\cb1 \
+\pard\pardeftab720\li1271\ri1271\sa130\qj
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 There are four important requirements that your assignment must satisfy.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa65\qj
+\ls9\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your executable file must be named exactly as shown above. The program will be run and marked electronically using a script file, so using a different name means the executable will not be found, and subsequently will not be marked.\cb1 \
+\ls9\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your program must be compiled to run on 
+\f2\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 remote.eos.ncsu.edu
+\f1\fs26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If we cannot run your program, we will not be able to mark it, and we will be forced to assign you a grade of 0.\cb1 \
+\ls9\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your program must produce output that exactly matches the format described in the {\field{\*\fldinst{HYPERLINK "http://www.csc.ncsu.edu/faculty/healey/csc541/assn_3/index.html#writing_results"}}{\fldrslt \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 Writing Results}} section of this assignment. If it doesn't, it will not pass our automatic comparison to known, correct output.\cb1 \
+\ls9\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You must submit your source code with your executable prior to the submission deadline. If you do not submit your source code, we cannot MOSS it to check for code similarity. Because of this, any assignment that does include source code will be assigned a grade of 0.\cb1 \
+}
