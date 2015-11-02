@@ -250,7 +250,7 @@ void create_replacement_run(char *input_file) {
     int heap_size = 750;
     int run_index = 0;
     int max_heap_size = 750;
-    int cur_run_size = 0;git
+    int cur_run_size = 0;
     int sec_index = 0;
     bool is_staged = false;
 
