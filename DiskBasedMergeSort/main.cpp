@@ -253,7 +253,7 @@ void create_replacement_run(char *input_file) {
     bool is_staged = false;
 
     // initial loading of the heap
-    if (file_size > 1000) {
+    if (file_size >= 1000) {
         input_handle.read((char *) heap, 750 * sizeof(int));
         input_handle.read((char *) input_buf, 250 * sizeof(int));
         file_size = file_size - 1000;
