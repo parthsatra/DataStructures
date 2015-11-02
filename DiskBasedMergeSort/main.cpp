@@ -1,10 +1,12 @@
 #include <iostream>
-#include <stdlib.h>
-#include <string>
+#include <cstdlib>
 #include <fstream>
 #include <iomanip>
 #include <sstream>
 #include <climits>
+#include <cstring>
+#include <string>
+#include <sys/time.h>
 
 using namespace std;
 
@@ -394,7 +396,6 @@ void basic_sort(char *input_file, char *output_file, bool is_replacement) {
 
     // merge the basic runs
     int size = merge(0, total_runs - 1, run_file, run_size, output_handle);
-    cout << size << endl;
 
     close_runs();
 
@@ -442,7 +443,6 @@ void multistep_sort(char *input_file, char *output_file) {
 
     // merge super runs
     int size = merge(0, total_super_runs - 1, run_file, super_run_size, output_handle);
-    cout << size << endl;
 
     close_super_runs();
     if (output_handle.is_open()) {
@@ -455,6 +455,11 @@ int main(int argc, char *argv[]) {
         char *merge_mode = argv[1];
         char *input_file = argv[2];
         char *sorted_file = argv[3];
+
+        struct timeval start_tm;
+        struct timeval end_tm;
+        gettimeofday(&start_tm, NULL);
+
         if (!strcmp("--basic", merge_mode)) {
             basic_sort(input_file, sorted_file, false);
         } else if (!strcmp("--multistep", merge_mode)) {
@@ -465,30 +470,17 @@ int main(int argc, char *argv[]) {
             cout << "Invalid merge method specified";
             exit(1);
         }
-        FILE *sorted;
-        sorted = fopen(sorted_file, "rb");
-        int buf[1];
-        while (!feof(sorted)) {
-            int num = fread(buf, sizeof(int), 1, sorted);
-            if (num > 0) {
-                cout << buf[0] << endl;
-            }
-        }
 
-        fclose(sorted);
-    } else if (argc == 2) {
-        char *outputFile = argv[1];
-        FILE *sorted;
-        sorted = fopen(outputFile, "rb");
-        int buf[1];
-        while (!feof(sorted)) {
-            int num = fread(buf, sizeof(int), 1, sorted);
-            if (num > 0) {
-                cout << buf[0] << endl;
-            }
+        // Calculating the total time.
+        gettimeofday(&end_tm, NULL);
+        long sec = end_tm.tv_sec - start_tm.tv_sec;
+        long usec = end_tm.tv_usec - start_tm.tv_usec;
+        if (usec < 0) {
+            usec = 1000000 + usec;
+            sec = sec - 1;
         }
+        printf("Time: %ld.%06ld", sec, usec);
 
-        fclose(sorted);
     } else {
         cout << "Invalid parameter list passed" << endl;
         exit(1);
