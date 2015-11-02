@@ -250,7 +250,7 @@ void create_replacement_run(char *input_file) {
     int heap_size = 750;
     int run_index = 0;
     int max_heap_size = 750;
-    int cur_run_size = 0;
+    int cur_run_size = 0;git
     int sec_index = 0;
     bool is_staged = false;
 
@@ -480,6 +480,7 @@ int main(int argc, char *argv[]) {
             sec = sec - 1;
         }
         printf("Time: %ld.%06ld", sec, usec);
+        printf("\n");
 
     } else {
         cout << "Invalid parameter list passed" << endl;
